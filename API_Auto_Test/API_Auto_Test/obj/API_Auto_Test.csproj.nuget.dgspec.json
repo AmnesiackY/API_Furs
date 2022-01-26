@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\API_Auto_Test\\API_Auto_Test\\API_Auto_Test.csproj": {}
+    "C:\\Users\\hitsa\\Desktop\\фыв\\API_Furs\\API_Auto_Test\\API_Auto_Test\\API_Auto_Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\API_Auto_Test\\API_Auto_Test\\API_Auto_Test.csproj": {
+    "C:\\Users\\hitsa\\Desktop\\фыв\\API_Furs\\API_Auto_Test\\API_Auto_Test\\API_Auto_Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\API_Auto_Test\\API_Auto_Test\\API_Auto_Test.csproj",
+        "projectUniqueName": "C:\\Users\\hitsa\\Desktop\\фыв\\API_Furs\\API_Auto_Test\\API_Auto_Test\\API_Auto_Test.csproj",
         "projectName": "API_Auto_Test",
-        "projectPath": "C:\\Users\\User\\Desktop\\API_Auto_Test\\API_Auto_Test\\API_Auto_Test.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\API_Auto_Test\\API_Auto_Test\\obj\\",
+        "projectPath": "C:\\Users\\hitsa\\Desktop\\фыв\\API_Furs\\API_Auto_Test\\API_Auto_Test\\API_Auto_Test.csproj",
+        "packagesPath": "C:\\Users\\hitsa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hitsa\\Desktop\\фыв\\API_Furs\\API_Auto_Test\\API_Auto_Test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hitsa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -88,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

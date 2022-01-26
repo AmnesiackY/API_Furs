@@ -7,6 +7,7 @@ using Xunit;
 using System.Threading;
 using System.Collections.ObjectModel;
 using OpenQA.Selenium.Html5;
+using RestSharp.Extensions;
 
 namespace API_Auto_Test
 {
@@ -15,25 +16,54 @@ namespace API_Auto_Test
         [Fact]
         public void Test1()
         {
-            Dictionary<string, string> body = new Dictionary<string, string>
+            //Set data for API request
+            var body = new Dictionary<string, string>
             {
                 { "ulogin", "art1613122" },
                 { "upassword", "505558545" }
             };
-            var response = API_Helper.SendJSON_API_Request("https://my.soyuz.in.ua/index.php", "Content-Type", "application/x-www-form-urlencoded", body);
+            var headers = new Dictionary<string, string>
+            {
+                { "Content-Type", "application/x-www-form-urlencoded" },
+            };
+            //Send API Login
 
-            var cookie = API_Helper.ExtractCookie(response);
+            var response = API_Helper.SendJSON_API_Request(body,headers,"https://my.soyuz.in.ua/", Method.POST);
 
+            //Get Cookie  & Change Cookie 
+            var cookie = API_Helper.ExtractCookie(response, "zbs_lang");
+            var cookie2 = API_Helper.ExtractCookie(response, "ulogin");
+            var cookie3 = API_Helper.ExtractCookie(response, "upassword");
+
+            //Open browser
             IWebDriver driver = new ChromeDriver();
-
             driver.Navigate().GoToUrl("https://my.soyuz.in.ua");
+            driver.Manage().Window.Maximize();
 
-            foreach (Cookie cookies in API_Helper.ExtractCookie(response))
-                driver.Manage().Cookies.AddCookie(cookies);
+            //Set cookie to browser
+            driver.Manage().Cookies.AddCookie(cookie);
+            driver.Manage().Cookies.AddCookie(cookie2);
+            driver.Manage().Cookies.AddCookie(cookie3);
 
+            //Open site for check
             driver.Navigate().GoToUrl("https://my.soyuz.in.ua/index.php");
 
-            Thread.Sleep(15000);
+            Thread.Sleep(5000);
+            driver.Close();
         }
+        [Fact]
+        public void Test2()
+        {
+            IWebDriver driver = new ChromeDriver();
+            driver.Navigate().GoToUrl("https://httpbin.org/#/Images/get_image_jpeg");
+            var client = new RestClient("https://imgbb.com");
+            client.Timeout = -1;
+            var request = new RestRequest(Method.POST);
+            request.AddFile("", "/Users/hitsa/Desktop/ôûâ/API_Furs/wf.jpg");
+            IRestResponse response = client.Execute(request);
+            client.DownloadData(request).SaveAs("/Users/hitsa/Desktop/ôûâ/API_Furs/test.jpg");
+        }
+        // 
+        //
     }
 }
