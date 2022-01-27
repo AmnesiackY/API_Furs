@@ -62,16 +62,37 @@ namespace API_Auto_Test
 
             var response1 = API_Helper.SendJSON_API_Request(body, headers2, "https://newbookmodels.com/auth/signin?goBackUrl=%2Fexplore", Method.POST);
 
-            Assert.Equal("OK", response1.StatusCode.ToString());        
+            Assert.Equal("OK", response1.StatusCode.ToString());  
+            
+            ResponseHandler abc = new ResponseHandler();
+            abc.StatusCode = response.StatusCode.ToString();
+            abc.ContentType = response.ContentType.ToString();
+            abc.ContentLength = response.ContentLength.ToString();
+        }
+        [Fact]
+        public void Test_CheckHandler()
+        {
+            var headers = new Dictionary<string, string>
+            {
+                { "Content-Type", "application/json" },
+                { "authority", "api.newbookmodels.com" }
+            };
+            var body = new Dictionary<string, string>
+            {
+                { "password", "12345678yariK!" },
+                { "email", "gustavfergusson@gmail.com" }
+            };
+
+            //Send API Login
+            var response = API_Helper.SendJSON_API_Request(body, headers, "https://api.newbookmodels.com/api/v1/auth/signin/", Method.POST);
+
+            ResponseHandler abc = new ResponseHandler();
+            abc.StatusCode = response.StatusCode.ToString();
+            abc.ContentType = response.ContentType.ToString();
+            abc.ContentLength = response.ContentLength.ToString();
         }
 
 
-
-
-
-
-
-        //Token contents = JsonSerializer.Deserialize<Token>(jsonString);
         //[Fact]
         //public void Test1()
         //{
