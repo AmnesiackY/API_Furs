@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BH5dG/GiTj2v3AWMA3sap8bJFwa39sdcW1pJNnqLu5lJZHWJ1zT++61uKUk6/eK68FEXZRVu3/Xp4XkhqiCziw==",
+  "dgSpecHash": "6zkPubeCAU2BiVGM0XjVpyshCR/QKyduoYaE05i0vDo4IkObdajzUjDwAjMv1GUn/5ecJGrUTQ3e1xbq6aXnog==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hitsa\\Desktop\\фыв\\API_Furs\\API_Auto_Test\\API_Auto_Test\\API_Auto_Test.csproj",
+  "projectFilePath": "C:\\Users\\hitsa\\Desktop\\API_Furs\\API_Auto_Test\\API_Auto_Test\\API_Auto_Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hitsa\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
     "C:\\Users\\hitsa\\.nuget\\packages\\firebaseadmin\\2.2.0\\firebaseadmin.2.2.0.nupkg.sha512",

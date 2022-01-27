@@ -6012,11 +6012,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hitsa\\Desktop\\фыв\\API_Furs\\API_Auto_Test\\API_Auto_Test\\API_Auto_Test.csproj",
+      "projectUniqueName": "C:\\Users\\hitsa\\Desktop\\API_Furs\\API_Auto_Test\\API_Auto_Test\\API_Auto_Test.csproj",
       "projectName": "API_Auto_Test",
-      "projectPath": "C:\\Users\\hitsa\\Desktop\\фыв\\API_Furs\\API_Auto_Test\\API_Auto_Test\\API_Auto_Test.csproj",
+      "projectPath": "C:\\Users\\hitsa\\Desktop\\API_Furs\\API_Auto_Test\\API_Auto_Test\\API_Auto_Test.csproj",
       "packagesPath": "C:\\Users\\hitsa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hitsa\\Desktop\\фыв\\API_Furs\\API_Auto_Test\\API_Auto_Test\\obj\\",
+      "outputPath": "C:\\Users\\hitsa\\Desktop\\API_Furs\\API_Auto_Test\\API_Auto_Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hitsa\\AppData\\Roaming\\NuGet\\NuGet.Config",

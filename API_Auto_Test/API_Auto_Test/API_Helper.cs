@@ -41,6 +41,13 @@ namespace API_Auto_Test
             IRestResponse response = client.Execute(request);
             return response;
         }
+        public static byte[] SendJsonApiRequest(string imageUrl)
+        {
+            var client = new RestClient(imageUrl);
+            var request2 = new RestRequest(Method.GET);
+            byte[] imageAsBytes = client.DownloadData(request2);
+            return imageAsBytes;
+        }
         public static Cookie ExtractCookie(IRestResponse response, string cookieName)
         {
             Cookie res = null;
@@ -56,13 +63,6 @@ namespace API_Auto_Test
                 res.Add(new Cookie(cookie.Name, cookie.Value, cookie.Domain, cookie.Path, null));
 
             return res;
-        }
-        public static byte[] SendJsonApiRequest(string imageUrl)
-        {
-            var client = new RestClient(imageUrl);
-            var request2 = new RestRequest(Method.GET);
-            byte[] imageAsBytes = client.DownloadData(request2);
-            return imageAsBytes;
         }
     }
 }

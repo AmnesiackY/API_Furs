@@ -1,10 +1,6 @@
 using RestSharp;
 using System.Collections.Generic;
-using System;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 using Xunit;
-using System.Threading;
 using System.IO;
 using System.Text.Json;
 
@@ -17,7 +13,7 @@ namespace API_Auto_Test
         {
             var body = new Dictionary<string, string>
             {
-                { "content", "/Users/User/Documents/GitArchives/test.jpg"}
+                { "content", "Users/hitsa/Desktop/Avatars/test3.jpg"}
             };
 
             var headers = new Dictionary<string, string>
