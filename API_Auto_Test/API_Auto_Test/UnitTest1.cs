@@ -8,6 +8,7 @@ using System.Threading;
 using System.Collections.ObjectModel;
 using OpenQA.Selenium.Html5;
 using RestSharp.Extensions;
+using System.IO;
 
 namespace API_Auto_Test
 {
@@ -26,8 +27,8 @@ namespace API_Auto_Test
             {
                 { "Content-Type", "application/x-www-form-urlencoded" },
             };
-            //Send API Login
 
+            //Send API Login
             var response = API_Helper.SendJSON_API_Request(body,headers,"https://my.soyuz.in.ua/", Method.POST);
 
             //Get Cookie  & Change Cookie 
@@ -54,16 +55,32 @@ namespace API_Auto_Test
         [Fact]
         public void Test2()
         {
-            IWebDriver driver = new ChromeDriver();
-            driver.Navigate().GoToUrl("https://httpbin.org/#/Images/get_image_jpeg");
-            var client = new RestClient("https://imgbb.com");
-            client.Timeout = -1;
-            var request = new RestRequest(Method.POST);
-            request.AddFile("", "/Users/hitsa/Desktop/ôûâ/API_Furs/wf.jpg");
-            IRestResponse response = client.Execute(request);
-            client.DownloadData(request).SaveAs("/Users/hitsa/Desktop/ôûâ/API_Furs/test.jpg");
+            //var client = new RestClient("https://imgbb.com");
+            //client.Timeout = -1;
+            //var request = new RestRequest(Method.POST);
+            //request.RequestFormat = DataFormat.Json;
+            //request.AddHeader("Content-Type", "multipart/form-data");
+            //request.AddFile("content", "/Users/User/Documents/GitArchives/test.jpg");
+            //IRestResponse response = client.Execute(request);
+            //Assert.Equal("OK", response.StatusCode.ToString());
+            var body = new Dictionary<string, string>
+            {
+                { "content", "/Users/User/Documents/GitArchives/test.jpg"}
+            };
+
+            var headers = new Dictionary<string, string>
+            {
+                { "Content-Type", "multipart/form-data"}
+            };
+
+            var response = API_Helper.SendJSON_API_Request(body, headers, "https://imgbb.com", Method.POST);
+            Assert.Equal("OK", response.StatusCode.ToString());
         }
-        // 
-        //
+        [Fact]
+        public void Test3()
+        {
+            byte[] content = API_Helper.SendJsonApiRequest("https://amnesiacky.github.io/images/2663068.png");
+            File.WriteAllBytes(Path.Combine("/Users/hitsa/Desktop/ôûâ/API_Furs", "test3.jpg"), content);
+        }
     }
 }

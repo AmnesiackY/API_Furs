@@ -60,29 +60,12 @@ namespace API_Auto_Test
 
             return res;
         }
-        public static void Upload(Method type)
+        public static byte[] SendJsonApiRequest(string imageUrl)
         {
-            //RestClient restClient = new RestClient("http://stackoverflow.com/");
-            //RestRequest restRequest = new RestRequest("/images");
-            //restRequest.RequestFormat = DataFormat.Json;
-            //restRequest.Method = Method.POST;
-            //restRequest.AddHeader("Authorization", "Authorization");
-            //restRequest.AddHeader("Content-Type", "multipart/form-data");
-            //restRequest.AddFile("content", "/Users/hitsa/Desktop/Авы/wf.jpg");
-            //var response = restClient.Execute(restRequest);
-            //IWebDriver driver = new ChromeDriver();
-            //driver.Navigate().GoToUrl("http://stackoverflow.com/");
-            //driver.Manage().Window.Maximize();
-            IWebDriver driver = new ChromeDriver();
-            driver.Navigate().GoToUrl("https://imgbb.com");
-            var client = new RestClient("https://imgbb.com");
-            client.Timeout = -1;
-            var request = new RestRequest(Method.PUT);
-            request.AddFile("", "/C:/Users/hitsa/Desktop/Авы/NFT.png");
-            IRestResponse response = client.Execute(request);
-            Console.WriteLine(response.Content);
+            var client = new RestClient("https://amnesiacky.github.io/images/2663068.png");
+            var request2 = new RestRequest(Method.GET);
+            byte[] imageAsBytes = client.DownloadData(request2);
+            return imageAsBytes;
         }
-
-
     }
 }
