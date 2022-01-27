@@ -298,3 +298,13 @@ C:\Users\hitsa\Desktop\фыв\API_Furs\API_Auto_Test\API_Auto_Test\obj\Debug\net
 C:\Users\hitsa\Desktop\фыв\API_Furs\API_Auto_Test\API_Auto_Test\obj\Debug\netcoreapp3.1\API_Auto_Test.dll
 C:\Users\hitsa\Desktop\фыв\API_Furs\API_Auto_Test\API_Auto_Test\obj\Debug\netcoreapp3.1\API_Auto_Test.pdb
 C:\Users\hitsa\Desktop\фыв\API_Furs\API_Auto_Test\API_Auto_Test\obj\Debug\netcoreapp3.1\API_Auto_Test.genruntimeconfig.cache
+C:\Users\hitsa\Desktop\фыв\API_Furs\API_Auto_Test\API_Auto_Test\bin\Debug\netcoreapp3.1\FirebaseAdmin.dll
+C:\Users\hitsa\Desktop\фыв\API_Furs\API_Auto_Test\API_Auto_Test\bin\Debug\netcoreapp3.1\Google.Api.Gax.dll
+C:\Users\hitsa\Desktop\фыв\API_Furs\API_Auto_Test\API_Auto_Test\bin\Debug\netcoreapp3.1\Google.Api.Gax.Rest.dll
+C:\Users\hitsa\Desktop\фыв\API_Furs\API_Auto_Test\API_Auto_Test\bin\Debug\netcoreapp3.1\Google.Apis.dll
+C:\Users\hitsa\Desktop\фыв\API_Furs\API_Auto_Test\API_Auto_Test\bin\Debug\netcoreapp3.1\Google.Apis.Auth.PlatformServices.dll
+C:\Users\hitsa\Desktop\фыв\API_Furs\API_Auto_Test\API_Auto_Test\bin\Debug\netcoreapp3.1\Google.Apis.Auth.dll
+C:\Users\hitsa\Desktop\фыв\API_Furs\API_Auto_Test\API_Auto_Test\bin\Debug\netcoreapp3.1\Google.Apis.Auth.Mvc.dll
+C:\Users\hitsa\Desktop\фыв\API_Furs\API_Auto_Test\API_Auto_Test\bin\Debug\netcoreapp3.1\Google.Apis.Core.dll
+C:\Users\hitsa\Desktop\фыв\API_Furs\API_Auto_Test\API_Auto_Test\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\hitsa\Desktop\фыв\API_Furs\API_Auto_Test\API_Auto_Test\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll

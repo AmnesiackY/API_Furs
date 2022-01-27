@@ -1,10 +1,7 @@
 ﻿using RestSharp;
 using System.Collections.Generic;
-using System;
-using Xunit;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-
+using RestSharp.Serialization.Json;
 namespace API_Auto_Test
 {
     public static class API_Helper
@@ -62,7 +59,7 @@ namespace API_Auto_Test
         }
         public static byte[] SendJsonApiRequest(string imageUrl)
         {
-            var client = new RestClient("https://amnesiacky.github.io/images/2663068.png");
+            var client = new RestClient(imageUrl);
             var request2 = new RestRequest(Method.GET);
             byte[] imageAsBytes = client.DownloadData(request2);
             return imageAsBytes;
