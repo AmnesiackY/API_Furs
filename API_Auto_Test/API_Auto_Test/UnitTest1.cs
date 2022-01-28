@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Xunit;
 using System.IO;
 using System.Text.Json;
+using System;
 
 namespace API_Auto_Test
 {
@@ -62,12 +63,7 @@ namespace API_Auto_Test
 
             var response1 = API_Helper.SendJSON_API_Request(body, headers2, "https://newbookmodels.com/auth/signin?goBackUrl=%2Fexplore", Method.POST);
 
-            Assert.Equal("OK", response1.StatusCode.ToString());  
-            
-            ResponseHandler abc = new ResponseHandler();
-            abc.StatusCode = response.StatusCode.ToString();
-            abc.ContentType = response.ContentType.ToString();
-            abc.ContentLength = response.ContentLength.ToString();
+            Assert.Equal("OK", response1.StatusCode.ToString());
         }
         [Fact]
         public void Test_CheckHandler()
@@ -86,10 +82,12 @@ namespace API_Auto_Test
             //Send API Login
             var response = API_Helper.SendJSON_API_Request(body, headers, "https://api.newbookmodels.com/api/v1/auth/signin/", Method.POST);
 
-            ResponseHandler abc = new ResponseHandler();
-            abc.StatusCode = response.StatusCode.ToString();
-            abc.ContentType = response.ContentType.ToString();
-            abc.ContentLength = response.ContentLength.ToString();
+            ResponseHandler handler = new ResponseHandler(response);
+            Console.WriteLine(handler.headers);
+            Console.WriteLine(handler.content);
+            Console.WriteLine(handler.statusCode);
+            Console.WriteLine(handler.contentLength);
+            Console.WriteLine(handler.contentType);
         }
 
 

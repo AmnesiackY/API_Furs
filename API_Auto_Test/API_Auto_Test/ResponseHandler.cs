@@ -1,15 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using RestSharp;
 
 namespace API_Auto_Test
 {
     public  class ResponseHandler
     {
-        public string StatusCode { get; set; }
-        public string ContentType { get; set; }
-        public string ContentLength { get; set; }
+        public string content { get; }
+        public string headers { get; }
+        public string statusCode {get;}
+        public string contentType {get;}
+        public string contentLength {get;}
 
+        public ResponseHandler(IRestResponse response)
+        {
+            content = response.Content.ToString();
+            headers = response.Headers.ToString();
+            statusCode = response.StatusCode.ToString();
+            contentType = response.StatusCode.ToString();
+            contentLength = response.StatusCode.ToString();
+        }
         public static string CheckStatus(string statuscode)
         {
             Dictionary<string, string> codes = new Dictionary<string, string>()
