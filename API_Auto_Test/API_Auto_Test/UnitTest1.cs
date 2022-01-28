@@ -23,7 +23,8 @@ namespace API_Auto_Test
             };
 
             var response = API_Helper.SendJSON_API_Request(body, headers, "https://imgbb.com", Method.POST);
-            Assert.Equal("OK", response.StatusCode.ToString());
+            ResponseHandler handler = new ResponseHandler(response);
+            Assert.Equal("OK", handler.statusCode);
         }
         [Fact]
         public void Test_Download_picture()
@@ -63,31 +64,8 @@ namespace API_Auto_Test
 
             var response1 = API_Helper.SendJSON_API_Request(body, headers2, "https://newbookmodels.com/auth/signin?goBackUrl=%2Fexplore", Method.POST);
 
-            Assert.Equal("OK", response1.StatusCode.ToString());
-        }
-        [Fact]
-        public void Test_CheckHandler()
-        {
-            var headers = new Dictionary<string, string>
-            {
-                { "Content-Type", "application/json" },
-                { "authority", "api.newbookmodels.com" }
-            };
-            var body = new Dictionary<string, string>
-            {
-                { "password", "12345678yariK!" },
-                { "email", "gustavfergusson@gmail.com" }
-            };
-
-            //Send API Login
-            var response = API_Helper.SendJSON_API_Request(body, headers, "https://api.newbookmodels.com/api/v1/auth/signin/", Method.POST);
-
-            ResponseHandler handler = new ResponseHandler(response);
-            Console.WriteLine(handler.headers);
-            Console.WriteLine(handler.content);
-            Console.WriteLine(handler.statusCode);
-            Console.WriteLine(handler.contentLength);
-            Console.WriteLine(handler.contentType);
+            ResponseHandler handler = new ResponseHandler(response1);
+            Assert.Equal("OK", handler.statusCode);
         }
 
 
